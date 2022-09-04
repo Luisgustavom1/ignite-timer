@@ -1,13 +1,15 @@
-import { ThemeProvider } from 'styled-components'
+import { BrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from './styles/theme/ThemeProvider'
+import { ComposeProviders as Providers } from './components/ComposeProviders'
+import { Router } from './Router'
 import { GlobalStyle } from './styles/global'
-import { defaultTheme } from './styles/theme/default'
 
 function App() {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <Providers with={[ThemeProvider, BrowserRouter]}>
+      <Router />
       <GlobalStyle />
-      <div className="App">oi</div>
-    </ThemeProvider>
+    </Providers>
   )
 }
 
