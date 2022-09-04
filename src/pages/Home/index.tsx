@@ -6,7 +6,7 @@ import {
   HomeContainer,
   HomeInput,
   StartCountdownButton,
-} from './HomeContainer'
+} from './styles'
 
 const Home = () => {
   return (
