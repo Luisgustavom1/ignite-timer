@@ -31,7 +31,7 @@ const Coutdown = () => {
 
       interval = setInterval(() => {
         setAmountSecondsPassed(
-          differenceInSeconds(new Date(), activeCycle.startDate),
+          differenceInSeconds(new Date(), new Date(activeCycle.startDate)),
         )
       }, 1000)
     }
